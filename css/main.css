@@ -1,4 +1,11 @@
 @import "normalize.css";
+@import "http://webfonts.ru/import/fira.css";
+
+/*
+	Fira Sans, 100, 100 italic, 200, 200 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 600, 600 italic, 700, 700 italic
+*/
+
+
 
 html, body {
     height: 100%;
@@ -9,11 +16,32 @@ body{
     font-size: 100%;
 }
 
+h1, h2{
+    margin: 0;
+}
+
+header {
+    color: #6f727e;
+    margin: auto;
+    height: 95px;
+    background-color: #edf1f5;
+    padding-top: 25px;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
 .container{
     width: 100%;
     min-height: 100%;
     height: auto !important;
     height: 100%;
+    font-family: "Fira Sans", sans-serif;
 }
 
 .container:before, .container:after {
@@ -23,35 +51,16 @@ body{
 .container:after {
     clear: both; }
 
-/*.container .col-1 {width: 8.33%}
-.container .col-2 {width: 16.66%}
-.container .col-3 {width: 25%}
-.container .col-4 {width: 33.33%}
-.container .col-5 {width: 41.66%}
-.container .col-6 {width: 50%}
-.container .col-7 {width: 58.33%}
-.container .col-8 {width: 66.66%}
-.container .col-9 {width: 75%}
-.container .col-10 {width: 83.33%}
-.container .col-11 {width: 91.66%}
-.container .col-12 {width: 100%}*/
-
-h1, h2{
-    margin: 0;
+.clear:after{
+    content: "&nbsp;";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
 }
 
-img{
-    max-width: 100%;
-}
-
-header{
-    color: #6f727e;
-    margin: auto;
-    height: 95px;
-    background-color: #edf1f5;
-    padding-top: 25px;
-}
-
+/* header */
 
 header .logo{
     float: left;
@@ -85,9 +94,11 @@ header .picts a{
 }
 
 #logo-footer{
-    font-size: 0.75em;
+    font-size: 0.65em;
     padding-top: 7px;
 }
+
+/* content */
 
 .content{
     max-width: 960px;
@@ -95,198 +106,7 @@ header .picts a{
     margin-top: 35px;
 }
 
-
-section{
-    width: 68.75%;
-    float: right;
-    margin: auto;
-    padding-bottom: 100px;
-}
-
-section article{
-    position: relative;
-    margin-bottom: 30px;
-    background-color: #edf1f5;
-}
-
-section article .header{
-    color: #28a2bb;
-    display: inline-block;
-    padding: 25px 25px 17px 25px;
-    border-bottom: 2px solid #1E667A;
-    margin-bottom: 30px;
-}
-
- .clear:after{
-    content: "&nbsp;";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    height: 0;
-    line-height: 0;
-}
-
-section article .portrait{
-    float: left;
-    width: 201px;
-    min-height: 200px;
-    margin-left: 33px;
-    padding-bottom: 47px;
-}
-
-section article .info{
-    float: left;
-}
-
-
-section article .info ul li{
-    font-size: .875em;
-    padding-bottom: 20px;
-}
-
-section article .info ul .skills{
-    display: inline-block;
-    float: right;
-}
-
-section article .info ul .key-skill{
-    display: inline-block;
-    float: left;
-}
-
-section article .info ul .clear .skills span{
-    text-align: center;
-    min-width: 40px;
-    color: whitesmoke;
-    font-size: .7em;
-    padding: 3px 4px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border: 1px solid #308ca2;
-    border-radius: 5px;
-    background-color: #308ca2;
-    background-image: -webkit-linear-gradient(top, #3da8bf 0%, #308ca2 50%,
-    #1e667a 50%, #145c7a 100%);
-    background-image: -moz-linear-gradient(top, #3da8bf 0%, #308ca2 50%,
-    #1e667a 50%, #1e667a 100%);
-    background-image: -o-linear-gradient(top, #3da8bf 0%, #308ca2 50%, #1e667a
-    50%, #145c7a 100%);
-    background-image: linear-gradient(top, #3da8bf 0%, #308ca2 50%, #1e667a
-    50%, #145c7a 100%);
-
-}
-
-ul{
-    list-style: none;
-}
-
-section article .clear .list{
-    padding-left: 65px;
-
-}
-
-section article .clear .list li{
-    padding-bottom: 37px;
-}
-
-section article .clear .list li .left{
-    min-width: 50px;
-    display: inline-block;
-    float: left;
-
-}
-
-section article .clear .list li .right{
-    clear: left;
-    display: inline-block;
-    margin-left: 20px;
-
-}
-
-footer{
-    clear: both;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    display: inline-block;
-    margin-top: -100px;
-}
-
-nav .contacts ul{
-    font-size: .8em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    border-radius: 7px;
-}
-
-nav .contacts ul li {
-    float: left;
-    width: 100%;
-    margin: auto;
-    height: 40px;
-}
-
-nav .contacts ul li a{
-    height: 100%;
-    display: block;
-    padding-top: 13px;
-    margin: auto;
-    color: white;
-    text-decoration: none;
-    padding-left: 70px;
-    background-repeat: no-repeat;
-    background-position: 10% 10px;
-}
-
-nav .contacts ul li a:hover{
-    text-decoration: underline;
-}
-
-#contacts{
-    height: 100%;
-    display: block;
-    padding-top: 13px;
-    margin: auto;
-    color: white;
-    text-decoration: none;
-    background-color: #3da9c0;
-    text-align: left;
-    font-size: 1.5em;
-    padding-left: 15px;
-}
-
-#phone{
-    background-color: #41b9d2;
-    background-image: url("../img/tel.png");
-}
-
-#mail{
-    padding-right: 30px;
-    text-align: right;
-    background-color: #48c9e6;
-    background-image: url("../img/post.png");
-}
-
-#skype{
-    background-color: #51d8f6;
-    background-image: url("../img/skype.png");
-}
-
-footer .copyright{
-    background-color: #edf1f5;
-    height: 50px;
-}
-
-footer .copyright p{
-    color: #6f727e;
-    font-size: .9em;
-    margin: 0;
-    padding: 15px 0;
-    text-align: center;
-}
+/* navigation */
 
 nav{
     width: 26.04%;
@@ -297,7 +117,7 @@ nav{
 
 nav .main-nav{
     height: 210px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 nav .main-nav ul{
@@ -337,9 +157,249 @@ nav .main-nav ul li a:hover{
 
 
 nav ul li a:active:hover{
-
     border-bottom: none;
 }
+
+nav .contacts ul{
+    min-height: 160px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .contacts ul li {
+    float: left;
+    width: 100%;
+    margin: auto;
+    height: 40px;
+}
+
+nav .contacts ul li a{
+    font-size: .9em;
+    height: 100%;
+    display: block;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    padding-left: 70px;
+    background-repeat: no-repeat;
+    background-position: 10% 10px;
+    padding-top: 10px;
+}
+
+nav .contacts ul li a:hover{
+    text-decoration: underline;
+}
+
+#contacts{
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #3da9c0;
+    text-align: left;
+    font-size: 1.5em;
+    padding-left: 15px;
+}
+
+#phone{
+    background-color: #41b9d2;
+    background-image: url("../img/tel.png");
+}
+
+#mail{
+    padding-right: 30px;
+    text-align: right;
+    background-color: #48c9e6;
+    background-image: url("../img/post.png");
+}
+
+#skype{
+    background-color: #51d8f6;
+    background-image: url("../img/skype.png");
+}
+
+section{
+    width: 68.75%;
+    float: right;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+article{
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #edf1f5;
+}
+
+article .header{
+    color: #28a2bb;
+    display: inline-block;
+    padding: 25px 25px 17px 25px;
+    border-bottom: 2px solid #1E667A;
+    margin-bottom: 30px;
+}
+
+
+
+article .portrait{
+    float: left;
+    width: 201px;
+    min-height: 200px;
+    margin-left: 33px;
+    padding-bottom: 47px;
+}
+
+article .info{
+    float: left;
+}
+
+
+article .info ul li{
+    font-size: .875em;
+    padding-bottom: 20px;
+}
+
+article .info ul .skills{
+    display: inline-block;
+    float: right;
+}
+
+article .info ul .key-skill{
+    display: inline-block;
+    float: left;
+}
+
+article .info ul .clear .skills span{
+    text-align: center;
+    min-width: 40px;
+    color: whitesmoke;
+    font-size: .6em;
+    padding: 3px 4px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #308ca2;
+    border-radius: 5px;
+    background-color: #308ca2;
+    background-image: -webkit-linear-gradient(top, #3da8bf 0%, #308ca2 50%,
+    #1e667a 50%, #145c7a 100%);
+    background-image: -moz-linear-gradient(top, #3da8bf 0%, #308ca2 50%,
+    #1e667a 50%, #1e667a 100%);
+    background-image: -o-linear-gradient(top, #3da8bf 0%, #308ca2 50%, #1e667a
+    50%, #145c7a 100%);
+    background-image: linear-gradient(top, #3da8bf 0%, #308ca2 50%, #1e667a
+    50%, #145c7a 100%);
+
+}
+
+
+
+article .clear .list{
+    padding-left: 65px;
+
+}
+
+article .clear .list li{
+    padding-bottom: 37px;
+}
+
+article .clear .list li .left{
+    min-width: 50px;
+    display: inline-block;
+    float: left;
+
+}
+
+article .clear .list li .right{
+    clear: left;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+
+
+
+
+
+/* footer */
+
+footer{
+    clear: both;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+    margin-top: -100px;
+}
+
+footer .copyright{
+    background-color: #edf1f5;
+    height: 50px;
+}
+
+footer .copyright p{
+    color: #6f727e;
+    font-size: .9em;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+@media (min-width: 961px) {
+    footer .contacts{
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    nav{
+        display: none;
+    }
+
+    section{
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    footer .contacts{
+        min-width: 100%;
+        display: inline-block;
+    }
+
+    footer .contacts ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .contacts ul li {
+        float: left;
+        width: 33.3%;
+        height: 33px;
+    }
+
+    footer .contacts ul li a{
+        height: 100%;
+        display: block;
+        margin: auto;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 10% 10px;
+        padding-top: 13px;
+        padding-bottom: 0;
+        font-size: .9em;
+    }
+
+    footer .contacts ul li a:hover{
+        text-decoration: underline;
+    }
+
+}
+
+
 
 
 
