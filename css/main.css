@@ -1,14 +1,14 @@
 @import "normalize.css";
-@import "http://webfonts.ru/import/fira.css";
-
+@import "fonts/fira.css";
 /*
 	Fira Sans, 100, 100 italic, 200, 200 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 600, 600 italic, 700, 700 italic
 */
-
+@import "fonts/Proxima-Nova/proxima.css";
 
 
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body{
@@ -16,8 +16,18 @@ body{
     font-size: 100%;
 }
 
-h1, h2{
+h1, h2, h3, h4{
     margin: 0;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+
+    font-weight: normal;
+    font-size: 1.65em;
 }
 
 header {
@@ -37,11 +47,9 @@ img{
 }
 
 .container{
-    width: 100%;
-    min-height: 100%;
-    height: auto !important;
     height: 100%;
-    font-family: "Fira Sans", sans-serif;
+    width: 100%;
+    font-family: fira_sansbook, sans-serif;
 }
 
 .container:before, .container:after {
@@ -62,18 +70,26 @@ img{
 
 /* header */
 
-header .logo{
-    float: left;
+.header-wrap{
+    max-width: 1170px;
+    height: auto;
+    margin: auto;
     padding-left: 25px;
+    padding-right: 25px;
+}
+
+header .logo{
+    position: relative;
+    float: left;
 }
 
 #logo{
+    font-family: "proxima_bold", sans-serif;
     border-bottom: 1px solid #6f727e;
 }
 
 header .picts{
     float: right!important;
-    margin-right: 1em;
 }
 
 header .picts a{
@@ -94,16 +110,19 @@ header .picts a{
 }
 
 #logo-footer{
-    font-size: 0.65em;
+    font-size: 0.85em;
     padding-top: 7px;
 }
 
 /* content */
 
 .content{
+    min-height: 100%;
     max-width: 960px;
     margin: auto;
     margin-top: 35px;
+    box-sizing: border-box;
+    padding-bottom: 50px;
 }
 
 /* navigation */
@@ -116,8 +135,9 @@ nav{
 }
 
 nav .main-nav{
-    height: 210px;
-    margin-bottom: 50px;
+    border-radius: 4px;
+    background-color: #EFF3F7;
+    overflow: hidden;
 }
 
 nav .main-nav ul{
@@ -133,31 +153,37 @@ nav .main-nav ul li{
 }
 
 nav .main-nav ul li a{
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 21px;
+    padding: 28px 0 29px 28px;
     font-size: 1.3em;
     color: #959aa8;
     display: block;
-    height: auto;
+    position: relative;
     text-decoration: none;
-    background-repeat: no-repeat;
     background-color: #edf1f5;
 }
 
-nav .main-nav ul li:active{
+nav .main-nav ul li a:active{
     color: white;
     background-color: #28a2bb;
 }
 
-nav .main-nav ul li a:hover{
-    border-bottom: 3px solid #145c7a;
-    color: #3da9c0;
+nav .main-nav ul li a:after{
+    content:'';
+    display:block;
+    position: absolute;
+    right: 100%;
+    transition: all .3s;
 }
 
+nav .main-nav ul li a:hover:after {
+    bottom: 0%;
+    left: 3%;
+    right: 3%;
+    border-bottom: 2px solid #3ba8c0;
+}
 
-nav ul li a:active:hover{
-    border-bottom: none;
+nav .contacts{
+    margin-top: 30px;
 }
 
 nav .contacts ul{
@@ -208,7 +234,6 @@ nav .contacts ul li a:hover{
 
 #mail{
     padding-right: 30px;
-    text-align: right;
     background-color: #48c9e6;
     background-image: url("../img/post.png");
 }
@@ -223,63 +248,69 @@ section{
     float: right;
     margin: auto;
     padding-bottom: 100px;
+    color: #3b3d4b;
 }
 
 article{
+    font-family: fira_sansbook, sans-serif;
     position: relative;
     margin-bottom: 30px;
     background-color: #edf1f5;
 }
 
-article .header{
+.header{
     color: #28a2bb;
     display: inline-block;
-    padding: 25px 25px 17px 25px;
+    padding: 18px 25px 13px 30px;
     border-bottom: 2px solid #1E667A;
-    margin-bottom: 30px;
 }
 
 
 
-article .portrait{
+.portrait{
     float: left;
     width: 201px;
     min-height: 200px;
-    margin-left: 33px;
-    padding-bottom: 47px;
+    margin-left: 23px;
+    margin-top: 15px;
 }
 
-article .info{
+.info{
     float: left;
 }
 
-
-article .info ul li{
-    font-size: .875em;
-    padding-bottom: 20px;
+.info ul{
+    margin: 0;
 }
 
-article .info ul .skills{
+.info ul li{
+    padding-top: 17px;
+}
+
+.info ul .skills{
     display: inline-block;
     float: right;
+    padding-top: 15px;
 }
 
-article .info ul .key-skill{
+.info ul .key-skill{
     display: inline-block;
     float: left;
 }
 
-article .info ul .clear .skills span{
+.info ul .clear .skills span{
     text-align: center;
     min-width: 40px;
     color: whitesmoke;
-    font-size: .6em;
-    padding: 3px 4px;
-    margin-left: 5px;
+    font-size: .7em;
+    font-family: fira_sansbold, sans-serif;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 3px;
     margin-bottom: 10px;
     display: inline-block;
     border: 1px solid #308ca2;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #308ca2;
     background-image: -webkit-linear-gradient(top, #3da8bf 0%, #308ca2 50%,
     #1e667a 50%, #145c7a 100%);
@@ -294,26 +325,26 @@ article .info ul .clear .skills span{
 
 
 
-article .clear .list{
+.list{
     padding-left: 65px;
-
+    margin-top: 20px;
 }
 
-article .clear .list li{
-    padding-bottom: 37px;
+.list li{
+    margin-bottom: 37px;
 }
 
-article .clear .list li .left{
+li .left{
     min-width: 50px;
     display: inline-block;
     float: left;
 
 }
 
-article .clear .list li .right{
+li .right{
     clear: left;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 40px;
 
 }
 
@@ -324,12 +355,13 @@ article .clear .list li .right{
 /* footer */
 
 footer{
+    height: 50px;
+    margin-top: -50px;
     clear: both;
     position: relative;
     overflow: hidden;
     width: 100%;
     display: inline-block;
-    margin-top: -100px;
 }
 
 footer .copyright{
@@ -346,13 +378,63 @@ footer .copyright p{
 }
 
 
-@media (min-width: 961px) {
+
+
+
+@media (min-width: 1701px){
+    header .logo{
+        float: left;
+    }
+
+    header .picts{
+        float: right!important;
+    }
+
     footer .contacts{
         display: none;
     }
 }
 
-@media (max-width: 960px) {
+@media (min-width: 1501px) and (max-width: 1700px){
+    header .logo{
+        float: left;
+        padding-left: 10%;
+    }
+
+    header .picts{
+        float: right!important;
+        margin-right: 10%;
+    }
+
+    footer .contacts{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1141px){
+    header .logo{
+        float: left;
+    }
+
+    header .picts{
+        float: right!important;
+    }
+
+    footer .contacts{
+        display: none;
+    }
+
+}
+
+@media (min-width: 961px) and (max-width: 1140px) {
+
+
+    footer .contacts{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
     nav{
         display: none;
     }
@@ -397,6 +479,96 @@ footer .copyright p{
         text-decoration: underline;
     }
 
+}
+
+@media (min-width: 321px) and  (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    section{
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    footer .contacts{
+        display: block;
+    }
+
+    footer .contacts ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .contacts ul li {
+        float: left;
+        width: 100%;
+        min-height: 46px;
+    }
+
+    footer .contacts ul li a{
+        height: 100%;
+        display: block;
+        margin: auto;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 10% 10px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: .9em;
+    }
+
+    footer .contacts ul li a:hover{
+        text-decoration: underline;
+    }
+
+}
+
+@media (max-width: 320px){
+    nav{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    footer .contacts{
+        display: block;
+    }
+
+    footer .contacts ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .contacts ul li {
+        float: left;
+        width: 100%;
+        min-height: 46px;
+    }
+
+    footer .contacts ul li a{
+        height: 100%;
+        display: block;
+        margin: auto;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 10% 10px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: .9em;
+    }
+
+    footer .contacts ul li a:hover{
+        text-decoration: underline;
+    }
 }
 
 
