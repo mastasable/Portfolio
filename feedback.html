@@ -41,7 +41,7 @@
                     <ul>
                         <li><a href="index.html" id="info">Обо мне</a></li>
                         <li><a href="projects.html" id="my-projects">Мои работы</a></li>
-                        <li><a href="/" id="contact-me">Связаться со мной</a></li>
+                        <li><a href="feedback.html" id="contact-me">Связаться со мной</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -61,21 +61,26 @@
                         <div class="underline"></div>
                     </div>
                     <div class="forms">
-                        <div class="row50">
+                        <div class="row50 left">
                             <form name="Name">
                                 <p>Имя</p>
                                 <input type="text" name="Name" placeholder="Как к вам обращаться"/>
                             </form>
                         </div>
-                        <div class="row50"><form name="Name">
-                            <p>Имя</p>
-                            <input type="text" name="Name" placeholder="Как к вам обращаться"/>
+                        <div class="row50 right"><form name="Email">
+                            <p>Email</p>
+                            <input type="email" name="Email" placeholder="Куда писать"/>
                         </form></div>
-                        <div class="row100"></div>
-                        <div class="row50"></div>
-                        <div class="row50"></div>
-                        <div class="row50"></div>
-                        <div class="row50"></div>
+                        <div class="row100">
+                            <p>Сообщение</p>
+                            <textarea name="message" id="message" cols="45" rows="7" placeholder="Кратко в чем суть"></textarea>
+                        </div>
+                        <div class="row50"><p>Имя</p>
+                            <input type="text" name="Name" placeholder="Как к вам обращаться"/></div>
+                        <div class="row50"><p>Имя</p>
+                            <input type="text" name="Name" placeholder="Как к вам обращаться"/></div>
+                        <div class="btnleft"><button id="submit">Отправить</button></div>
+                        <div class="btnright"><button id="reset">Очистить</button></div>
                     </div>
                 </article>
             </section>
