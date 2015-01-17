@@ -21,7 +21,7 @@ h1, h2, h3, h4{
 }
 
 h1{
-    font-size: 2.5em;
+    font-size: 2.35em;
 }
 
 h2{
@@ -46,19 +46,6 @@ img{
     max-width: 100%;
 }
 
-.container{
-    height: 100%;
-    width: 100%;
-    font-family: fira_sansbook, sans-serif;
-}
-
-.container:before, .container:after {
-    display: table;
-    content: " "; }
-
-.container:after {
-    clear: both; }
-
 .clear:after{
     content: "&nbsp;";
     display: block;
@@ -68,14 +55,19 @@ img{
     line-height: 0;
 }
 
+.container{
+    width: 100%;
+    min-height: 100%;
+    height: auto!important;
+    height: 100%;
+}
+
 /* header */
 
 .header-wrap{
-    max-width: 1170px;
+    max-width: 1200px;
     height: auto;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 header .logo{
@@ -84,7 +76,9 @@ header .logo{
 }
 
 #logo{
-    font-family: "proxima_bold", sans-serif;
+    padding-top: 5px;
+    font-family: "proxima_extrabold", sans-serif;
+    text-transform: uppercase;
     border-bottom: 1px solid #6f727e;
 }
 
@@ -110,34 +104,33 @@ header .picts a{
 }
 
 #logo-footer{
-    font-size: 0.85em;
+    font-size: 0.82em;
     padding-top: 7px;
+    text-transform: lowercase;
 }
 
 /* content */
 
 .content{
-    min-height: 100%;
     max-width: 960px;
     margin: auto;
     margin-top: 35px;
     box-sizing: border-box;
-    padding-bottom: 50px;
 }
 
 /* navigation */
 
 nav{
-    width: 26.04%;
+    width: 26%;
     float: left;
     overflow: hidden;
-    border-radius: 7px;
 }
 
 nav .main-nav{
     border-radius: 4px;
     background-color: #EFF3F7;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 nav .main-nav ul{
@@ -148,12 +141,11 @@ nav .main-nav ul{
 nav .main-nav ul li{
     float: left;
     width: 100%;
-    margin: 0;
     background-color: #edf1f5;
 }
 
 nav .main-nav ul li a{
-    padding: 28px 0 29px 28px;
+    padding: 28px 0 12px 28px;
     font-size: 1.3em;
     color: #959aa8;
     display: block;
@@ -183,11 +175,11 @@ nav .main-nav ul li a:hover:after {
 }
 
 nav .contacts{
-    margin-top: 30px;
+    height: 160px;
+    border-radius: 4px;
 }
 
 nav .contacts ul{
-    min-height: 160px;
     margin: 0;
     padding: 0;
 }
@@ -200,16 +192,16 @@ nav .contacts ul li {
 }
 
 nav .contacts ul li a{
+    padding-top: 10px;
+    padding-left: 60px;
     font-size: .9em;
     height: 100%;
     display: block;
     margin: auto;
     color: white;
     text-decoration: none;
-    padding-left: 70px;
     background-repeat: no-repeat;
     background-position: 10% 10px;
-    padding-top: 10px;
 }
 
 nav .contacts ul li a:hover{
@@ -225,6 +217,7 @@ nav .contacts ul li a:hover{
     text-align: left;
     font-size: 1.5em;
     padding-left: 15px;
+    border-radius: 4px 4px 0 0;
 }
 
 #phone{
@@ -244,11 +237,12 @@ nav .contacts ul li a:hover{
 }
 
 section{
-    width: 68.75%;
+    width: 68%;
     float: right;
     margin: auto;
-    padding-bottom: 100px;
     color: #3b3d4b;
+    margin-bottom: 70px;
+    border-radius: 4px;
 }
 
 article{
@@ -256,6 +250,75 @@ article{
     position: relative;
     margin-bottom: 30px;
     background-color: #edf1f5;
+}
+
+.fullscreen{
+    border-radius: 4px;
+    min-height: 500px;
+}
+
+#container{
+    width: 615px;
+    margin: auto;
+}
+
+#container a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.feedback .header{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: white;
+    border: none;
+}
+
+.title{
+    font-size: 1.6em;
+    background-color: #49cbe8;
+    max-width: 100%;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+
+.underline{
+    height: 20px;
+    width: 100%;
+    background-color: #68dffa;
+}
+
+a .top{
+    height: 80px;
+}
+
+#addproject{
+    text-decoration: none;
+    color: #28a2bb;
+}
+
+#addproject span{
+    display: block;
+}
+
+.item{
+    width: 180px;
+    margin: 20px 10px;
+    float: left;
+    border: 2px solid #28a2bb;
+    border-radius: 4px;
+    height: 130px;
+}
+
+.last{
+    border: 2px dashed #28a2bb;
+    background-image: url("../img/addimj.png");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .header{
@@ -323,7 +386,34 @@ article{
 
 }
 
+input{
+    width: 100%;
+    border: 1px solid #69dffa;
+    border-radius: 4px;
+    color: #69dffa;
+}
 
+::-webkit-input-placeholder {color:#69dffa;}
+::-moz-placeholder          {color:#69dffa;}/* Firefox 19+ */
+:-moz-placeholder           {color:#69dffa;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#69dffa;}
+
+.forms{
+    max-width: 400px!important;
+    width: 400px;
+    margin: auto;
+}
+
+.row50{
+    margin: auto;
+    margin-right: 10px;
+    display: inline-block;
+    width: 45%;
+}
+
+.row100{
+    width: 100%;
+}
 
 .list{
     padding-left: 65px;
@@ -355,8 +445,8 @@ li .right{
 /* footer */
 
 footer{
-    height: 50px;
-    margin-top: -50px;
+    margin: -60px auto 0;
+    height: 60px;
     clear: both;
     position: relative;
     overflow: hidden;
@@ -366,7 +456,7 @@ footer{
 
 footer .copyright{
     background-color: #edf1f5;
-    height: 50px;
+    height: 100%;
 }
 
 footer .copyright p{
@@ -381,35 +471,7 @@ footer .copyright p{
 
 
 
-@media (min-width: 1701px){
-    header .logo{
-        float: left;
-    }
 
-    header .picts{
-        float: right!important;
-    }
-
-    footer .contacts{
-        display: none;
-    }
-}
-
-@media (min-width: 1501px) and (max-width: 1700px){
-    header .logo{
-        float: left;
-        padding-left: 10%;
-    }
-
-    header .picts{
-        float: right!important;
-        margin-right: 10%;
-    }
-
-    footer .contacts{
-        display: none;
-    }
-}
 
 @media screen and (min-width: 1141px){
     header .logo{
@@ -417,7 +479,7 @@ footer .copyright p{
     }
 
     header .picts{
-        float: right!important;
+        float: right;
     }
 
     footer .contacts{
@@ -427,7 +489,6 @@ footer .copyright p{
 }
 
 @media (min-width: 961px) and (max-width: 1140px) {
-
 
     footer .contacts{
         display: none;
@@ -482,7 +543,6 @@ footer .copyright p{
 }
 
 @media (min-width: 321px) and  (max-width: 768px) {
-
     nav{
         display: none;
     }
@@ -491,6 +551,10 @@ footer .copyright p{
         width: 92%;
         margin-left: 4%;
         margin-right: 4%;
+    }
+
+    #container{
+        width: 98%;
     }
 
     footer .contacts{
