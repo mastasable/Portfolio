@@ -84,15 +84,23 @@
     </footer>
 
     <div id="modal">
-        <span id="modal_close"></span>
+        <div class="modal-head">
+            Добавление проекта
+            <div id="modal_close"></div>
+        </div>
             <form action="">
-                <input type="text"/>
-                <input type="text"/>
-                <input type="text"/>
-                <textarea name="" id="" cols="b" rows="10"></textarea>
-                <button></button>
+                <label for="project-name">Название проекта</label>
+                <input type="text" id="project-name" placeholder="Введите название"/>
+                <label for="project-img"></label>
+                <input type="file" id="project-img" placeholder="Загрузите изображение"/>
+                <label for="project-url">URL проекта</label>
+                <input type="text" id="project-url" placeholder="Добавьте ссылку"/>
+                <label for="project-info">Описание</label>
+                <textarea name="" id="project-info" cols="6" rows="5" placeholder="Пара слов о вашем проекте"></textarea>
+                <button>Добавить</button>
             </form>
     </div>
+    <div id="overlay"></div>
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/masonry.js"></script>
     <script src="js/imagesload.js"></script>

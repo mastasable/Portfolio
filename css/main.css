@@ -178,8 +178,9 @@ nav .main-nav ul li a:hover:after {
 }
 
 nav .contacts{
-    height: 160px;
+    overflow: hidden;
     border-radius: 4px;
+
 }
 
 nav .contacts ul{
@@ -188,31 +189,36 @@ nav .contacts ul{
 }
 
 nav .contacts ul li {
+    display: block;
     float: left;
     width: 100%;
 }
 
 nav .contacts ul li a{
-    padding-top: 10px;
-    padding-left: 70px;
-    font-size: .9em;
+    font-size: .925em;
     width: 100%;
-    height: 30px;
-    float: left;
+    line-height: 40px;
     display: block;
     margin: auto;
     color: white;
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: 35px 10px;
+    float: left;
 }
 
-nav .contacts ul li a:hover{
+.whitespace{
+    display: inline-block;
+    width: 80px;
+}
+
+.btn-contacts:hover{
     text-decoration: underline;
 }
 
+
 #contacts{
-    height: 100%;
+    line-height: 40px;
     display: block;
     color: white;
     text-decoration: none;
@@ -220,17 +226,15 @@ nav .contacts ul li a:hover{
     text-align: left;
     font-size: 1.5em;
     padding-left: 15px;
-    border-radius: 4px 4px 0 0;
 }
 
 #phone{
-    background-color: #41b9d2;
+    background-color: #48c9e6;
     background-image: url("../img/tel.png");
 }
 
 #mail{
-    padding-right: 30px;
-    background-color: #48c9e6;
+    background-color: #41b9d2;
     background-image: url("../img/post.png");
 }
 
@@ -249,6 +253,7 @@ section{
 }
 
 article{
+    overflow: hidden;
     font-family: fira_sansbook, sans-serif;
     position: relative;
     margin-bottom: 30px;
@@ -420,21 +425,55 @@ button{
     border: none;
     border-radius: 7px;
     color: white;
+}
+
+.bnt-blue button{
     background-color: #49cbe8;
     -webkit-box-shadow: 0px 3px 3px #3da9c0;
     -moz-box-shadow: 0px 3px 3px #3da9c0;
     box-shadow: 0px 3px 3px #3da9c0;
 }
 
-button:hover{
+.right button{
     background-color: #859eb6;
     -webkit-box-shadow: 0px 3px 3px #666;
     -moz-box-shadow: 0px 3px 3px #666;
     box-shadow: 0px 3px 3px #666;
 }
 
-.btnleft{float: left}
-.btnright{float:right}
+.btn-left button{
+    float: left;
+    background-color: #49cbe8;
+    -webkit-box-shadow: 0px 3px 3px #3da9c0;
+    -moz-box-shadow: 0px 3px 3px #3da9c0;
+    box-shadow: 0px 3px 3px #3da9c0;
+}
+
+.btn-right button{
+    float:right;
+    background-color: #859eb6;
+    -webkit-box-shadow: 0px 3px 3px #666;
+    -moz-box-shadow: 0px 3px 3px #666;
+    box-shadow: 0px 3px 3px #666;
+}
+
+button:hover{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-left button:active{
+    -webkit-box-shadow: 0px -3px 3px #3da9c0;
+    -moz-box-shadow: 0px -3px 3px #3da9c0;
+    box-shadow: 0px -3px 3px #3da9c0;
+}
+
+.btn-right button:active{
+    -webkit-box-shadow: 0px -3px 3px #666;
+    -moz-box-shadow: 0px -3px 3px #666;
+    box-shadow: 0px -3px 3px #666;
+}
 
 .forms{
     max-width: 400px!important;
@@ -515,8 +554,77 @@ footer .copyright p{
 
 
 /*Модальное окно*/
+#modal{
+    width: 365px;
+    height: 480px;
+    border-radius: 5px;
+    background-color: #eff3f7;
+    position: fixed;
+    display: none;
+    top:50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-left: -180px;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px 10px;
+    font-family: fira_sansbook, sans-serif;
+}
 
+#modal input{
+    margin-bottom: 20px;
+}
 
+#modal form{
+    width: 92%;
+    margin: auto;
+}
+
+#modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+#overlay{
+    z-index: 3;
+    position: fixed;
+    background-color: #3b3d4b;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.modal-head{
+    width: 100%;
+    color: #FBFCFD;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #00CCEA;
+    position: relative;
+    border-bottom: 9px solid #00e0fb;
+    margin-bottom: 20px;
+}
+
+.modal-head #modal_close{
+    border-radius: 50%;
+    background: url('../img/close.png') #00CCEA;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 11px;
+    position: absolute;
+    cursor: pointer;
+    float: right;
+}
 
 
 
