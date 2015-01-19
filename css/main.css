@@ -164,11 +164,13 @@ nav .main-nav ul{
     padding: 0;
 }
 
-nav .main-nav ul li{
-    float: left;
+nav .main-nav ul li {
+    margin: auto;
     width: 100%;
     background-color: #edf1f5;
 }
+
+
 
 nav .main-nav ul li a{
     padding: 28px 0 12px 28px;
@@ -180,26 +182,38 @@ nav .main-nav ul li a{
     background-color: #edf1f5;
 }
 
+.current{
+    margin: 0;
+    border-bottom: none;
+    padding-left: 6px;
+    margin-top: -2px;
+    background: #3ba8c0;
+}
+
+nav .main-nav ul li a:hover{
+    color: #3ba8c0;
+}
+
 nav .main-nav ul li a:active{
     color: white;
     background-color: #28a2bb;
     border-bottom: none;
 }
 
-nav .main-nav ul li a:after{
-    content:'';
-    display:block;
+nav .main-nav ul li a:after {
+    content: '';
+    display: block;
     position: absolute;
-    right: 100%;
-    transition: all .3s;
-}
-
-nav .main-nav ul li a:hover:after {
-    bottom: 0%;
+    bottom: 0;
     left: 3%;
     right: 3%;
     border-bottom: 2px solid #3ba8c0;
 }
+
+#contact-me:after{
+    border-bottom: none;
+}
+
 
 nav .contacts{
     overflow: hidden;
