@@ -33,6 +33,7 @@ $(function() {
                 .animate({opacity: 1, top: '50%'}, 200);
         });
     });// конец открытия модального окна
+
     //закрытие модального окна
     $('#modal_close, #overlay').click(function(){
         $('#modal')
@@ -43,30 +44,44 @@ $(function() {
             });
     });//конец модального окна
 
+    //имитация input[type=file]
+    var wrapper = $(".file-upload"),
+        inp = wrapper.find("input"),
+        btn = wrapper.find("button"),
+        lbl = wrapper.find("div");
+    btn.focus(function(){
+       inp.focus()
+    });
+    inp.focus(function(){
+        wrapper.addClass("focus");
+    }).blur(function(){
+       wrapper.removeClass("focus");
+    });
+    btn.add(lbl).click(function(){
+        inp.click();
+    });
+    btn.focus(function(){
+        wrapper.addClass( "focus" );
+    }).blur(function(){
+        wrapper.removeClass( "focus" );
+    });//конец имитации input[type=file]
 
+    //заполнение поля выбора файла
+    var fileApi = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+    inp.change(function(){
+        var file_name;
+        if( file_api && inp[ 0 ].files[ 0 ] )
+            file_name = inp[ 0 ].files[ 0 ].name;
+        else
+            file_name = inp.val().replace( "C:\\fakepath\\", '' );
+
+        if( ! file_name.length )
+            return;
+
+        if( lbl.is( ":visible" ) ){
+            lbl.text( file_name );
+        }else
+            btn.text( file_name );
+    }).change();
 });
-
-//fake input[type="file"]
-var W3CDOM = (document.createElement && document.getElementsByTagName);
-
-function initFileUploads(){
-    if(!W3CDOM) return;
-    var fakeFileUpload = document.createElement('div');
-    fakeFileUpload.className = "fakefile";
-    fakeFileUpload.appendChild(document.createElement('input'));
-    var image = document.createElement('img');
-    image.src = 'img/download.png';
-    fakeFileUpload.appendChild(image);
-    var x = document.getElementsByTagName('input');
-    for (var i= 0; i< x.length; i++){
-        if(x[i].type != 'file') continue;
-        if(x[i].parentNode.className != 'fileinputs') continue;
-        x[i].className = 'file hidden';
-        var clone = fakeFileUpload.cloneNode(true);
-        x[i].parentNode.appendChild(clone);
-        x[i].relatedElement = clone.getsElementsByTagName('input')[0];
-        x[i].onchange = x[i].onemouseout = function(){
-            this.relatedElement.value = this.value;
-        }
-    }
-}
