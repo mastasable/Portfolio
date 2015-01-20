@@ -179,26 +179,14 @@ nav .main-nav ul li a{
     display: block;
     position: relative;
     text-decoration: none;
-    background-color: #edf1f5;
 }
 
-.current{
-    margin: 0;
-    border-bottom: none;
-    padding-left: 6px;
-    margin-top: -2px;
-    background: #3ba8c0;
-}
+
 
 nav .main-nav ul li a:hover{
     color: #3ba8c0;
 }
 
-nav .main-nav ul li a:active{
-    color: white;
-    background-color: #28a2bb;
-    border-bottom: none;
-}
 
 nav .main-nav ul li a:after {
     content: '';
@@ -208,6 +196,16 @@ nav .main-nav ul li a:after {
     left: 3%;
     right: 3%;
     border-bottom: 2px solid #3ba8c0;
+}
+
+nav .main-nav ul li.active{
+    border-bottom: none;
+    margin-top: -2px;
+    background-color: #3ba8c0;
+}
+
+nav .main-nav ul li.active a{
+    color: white;
 }
 
 #contact-me:after{
