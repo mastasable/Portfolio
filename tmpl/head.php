@@ -11,6 +11,7 @@
     <title><?php echo $data['title'];?></title>
     <!-- <link rel="stylesheet" href="css/normalize.css"/> -->
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
     <!--[if lte IE 8]>
     <script>
         document.createElement("nav");
@@ -22,3 +23,5 @@
     </script>
     <![endif]-->
 </head>
+<body>
+<div class="container">

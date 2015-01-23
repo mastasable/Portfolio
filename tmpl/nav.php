@@ -2,8 +2,8 @@
     <div class="main-nav">
         <ul>
             <li <?php echo ($page == '')? 'class="active"':''?>><a href="/" id="info" >Обо мне</a></li>
-            <li <?php echo ($page == 'projects') ? 'class="active"' : '';?>><a href="projects" id="my-projects" >Мои работы</a></li>
-            <li <?php echo ($page == 'feedback') ? 'class="active"' : '';?>><a href="feedback" id="contact-me" >Связаться со мной</a></li>
+            <li <?php echo ($page == 'projects.php') ? 'class="active"' : '';?>><a href="projects.php" id="my-projects">Мои работы</a></li>
+            <li <?php echo ($page == 'feedback.php') ? 'class="active"' : '';?>><a href="feedback.php" id="contact-me">Связаться со мной</a></li>
         </ul>
     </div>
     <div class="contacts">

@@ -48,7 +48,7 @@
                     <ul>
                         <li><span id="contacts">Контакты</li>
                         <li><a href="#" id="mail"><span class="whitespace"></span><span class="btn-contacts">masta.sable@gmail.com</span></a></li>
-                        <li><a href="#" id="phone"><span class="whitespace"></span><span class="btn-contacts">+79269612210</span></a></li>
+                        <li><a href="tel+79269612210" id="phone"><span class="whitespace"></span><span class="btn-contacts">+79269612210</span></a></li>
                         <li><a href="#" id="skype"><span class="whitespace"></span><span class="btn-contacts">masta.sable</span></a></li>
                     </ul>
                 </div>
@@ -74,10 +74,11 @@
                             <p>Сообщение</p>
                             <textarea name="message" id="message" cols="45" rows="7" placeholder="Кратко в чем суть"></textarea>
                         </div>
-                        <div class="row50"><p>Имя</p>
-                            <input type="text" name="Name" placeholder="Как к вам обращаться"/></div>
-                        <div class="row50"><p>Имя</p>
-                            <input type="text" name="Name" placeholder="Как к вам обращаться"/></div>
+                        <div class="captcha">
+                            <p>Введите код, указанный на картинке</p>
+                            <img src="img/captcha.jpg" alt=""/>
+                            <form><input type="text" name="captcha" placeholder="Введите код"/></form>
+                        </div>
                         <div ><button id="submit" class="btn-left">Отправить</button></div>
                         <div ><button id="reset" class="btn-right">Очистить</button></div>
                     </div>

@@ -298,11 +298,11 @@ article{
 
 .fullscreen{
     border-radius: 4px;
-    height: auto;
+    min-height: 600px;
 }
 
 .feedback{
-    height: 600px;
+    min-height: 700px;
 }
 
 #container{
@@ -342,7 +342,7 @@ article{
 }
 
 a .top{
-    height: 80px;
+    height: 100px;
 }
 
 #addproject{
@@ -355,19 +355,41 @@ a .top{
 }
 
 .item{
+    margin-top: 20px;
     width: 180px;
-    margin: 20px 10px;
     float: left;
-    border: 2px solid #28a2bb;
-    border-radius: 4px;
-    height: 130px;
+    height: 160px;
+    overflow: hidden;
+    z-index: 1;
 }
 
+.item a .image{
+    display: block;
+    width: auto;
+    height: 130px;
+    border: 2px solid #308ca2;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.item a{
+    text-decoration: none;
+    color: #3b3d4b;
+}
+
+.item img:hover{
+    -moz-opacity: 0.20;
+    opacity:.20;
+    filter: alpha(opacity=20);
+}
+
+
 .last{
+    height: 130px;
     border: 2px dashed #28a2bb;
     background-image: url("../img/addimj.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 60px;
 }
 
 .header{
@@ -443,6 +465,7 @@ input, textarea{
     border: 1px solid #69dffa;
     border-radius: 4px;
     color: #69dffa;
+    resize: none;
 }
 
 input{
@@ -540,6 +563,22 @@ button:hover{
 
 .row100 input{
     height: 150px;
+}
+
+.captcha{
+    margin-bottom: 20px;
+}
+
+.captcha img{
+    height: 80px;
+    width: 48%;
+    border: 1px solid #00CCEA;
+    border-radius: 4px;
+}
+
+.captcha form{
+    float: right;
+    padding-top: 15px;
 }
 
 .list{

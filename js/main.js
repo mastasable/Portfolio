@@ -13,8 +13,8 @@ $(function() {
                 queue: false,
                 duration: 500
             },
-            columnWidth: 205
-
+            columnWidth: 205,
+            gutter: 10
         });
     });
 
@@ -22,6 +22,7 @@ $(function() {
     $('.item').last()
         .addClass('last')
         .html('<a href="#modal" id="addproject"><span class="top"></span><span>Добавить проект</span></a>');
+
 
     //модальное окно
     //открытие модального окна
@@ -71,7 +72,7 @@ $(function() {
 
     inp.change(function(){
         var file_name;
-        if( file_api && inp[ 0 ].files[ 0 ] )
+        if( fileApi && inp[ 0 ].files[ 0 ] )
             file_name = inp[ 0 ].files[ 0 ].name;
         else
             file_name = inp.val().replace( "C:\\fakepath\\", '' );
